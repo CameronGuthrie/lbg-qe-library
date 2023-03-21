@@ -11,9 +11,10 @@
 
                     <tr class="table-secondary">
                         <td><a href="{% url 'book_detail' bookinst.book.pk %}">{{ bookinst.book.title }}</a></td>
+                        <td>{{ bookinst.imprint }}</td>
                         <td><a href="{% url 'loan_book_librarian' bookinst.id %}">Loan</a></td>
-
                     </tr>
+
                 {% endfor %}
             </table>
 

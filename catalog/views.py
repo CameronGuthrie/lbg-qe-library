@@ -93,7 +93,7 @@ class AvailBooksListView(generic.ListView):
     """Generic class-based view listing all books on loan. """
     model = BookInstance
     template_name = 'catalog/bookinstance_list_available.html'
-    paginate_by = 10
+    # paginate_by = 10
 
     def get_queryset(self):
         return BookInstance.objects.filter(status__exact='a').order_by('book__title')
